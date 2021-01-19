@@ -1,4 +1,3 @@
-
 def grid_print(grid):
     for i in range(len(grid)):
         print(grid[i])
@@ -6,7 +5,7 @@ def grid_print(grid):
 
 def extract_coor(coor):
     row = coor[0]
-    col = coor[1]
+    col = int(coor[1]) - 1
 
     if row == "A":
         row = 0
@@ -23,21 +22,26 @@ def extract_coor(coor):
 
 
 def launch_bomb(coor):
-    target = grid[coor[0, coor[1]]]
+    try:
+        target = grid[coor[0]][coor[1]]
+    except (IndexError, TypeError) as e:
+        print('Not in range, sir!')
+        return 0
     if target == 0:
-        target = "X"
+        grid[coor[0]][coor[1]] = "X"
     else:
-        print("You've missed")
+        print("You've missed >:P")
 
 
 grid = [[0 for i in range(5)] for j in range(5)]
 
-coor = 1
-while coor != "q":
+while True:
     grid_print(grid)
 
     coor = str(input("Enter coordinates to bomb (eg. A4): "))
+    if coor == 'q':
 
+        break
     new_coor = extract_coor(coor)
     launch_bomb(new_coor)
-
+print('Game over.')
