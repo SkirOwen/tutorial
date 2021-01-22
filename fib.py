@@ -1,3 +1,5 @@
+
+
 def fib(n):
     f0, f1 = 0, 1
     while f0 < n:
