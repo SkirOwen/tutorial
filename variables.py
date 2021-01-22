@@ -30,6 +30,8 @@ f = False       # False is equivalent to 0
 bool_a = bool(a)
 print(bool_a)
 
+# do something whit type
+
 
 msg_0 = "Hello?"  # This is a string
 msg_1 = 'Yes?'  # This is also a string
