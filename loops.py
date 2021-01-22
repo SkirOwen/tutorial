@@ -4,6 +4,9 @@ lst = [16, 14, 5, 3]
 for i in range(len(lst)):
     print("lst[" + str(i) + "] = ", lst[i])
 
+for i in lst:
+    print("i in lst = ", i)    # what changed?
+
 # do the same, put only print if the number is even
 
 
