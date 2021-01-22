@@ -54,6 +54,11 @@ lst_0 = [5, -14, -16, -13]
 index_0 = lst_0[0]      # What is this?
 # What is the length of the list? print it on the next line
 
+# dict{key: value}
+dic = {"name": "",
+       "Surname": "",
+       "Age": 0}
+
 
 # Operators
 add = 5 + 3.0
